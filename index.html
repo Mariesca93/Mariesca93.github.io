@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<body>
+   <!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#SERVICES" class="w3-button w3-block w3-black">SERVICES</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#PORTFOLIO" class="w3-button w3-block w3-black">PORTFOLIO</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#CONTACT-US" class="w3-button w3-block w3-black">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">F.E LANDSCAPING</span></h5>
+      <img src="assets/mani-sankar-CTfcm6sZi0I-unsplash.jpg" style="width:100%;max-width:1000px" class="w3-margin-top"/>
+      <p> Welcome to F.E Landscaping, was established in the year of 2017 and is a privately-owned company based in Utah Valley, with over a decade of experience and proudly serves our Utah customers from Spanish Fork, UT to Bountiful, UT. </p>
+      <p> We offer a full range of landscaping, fencing, and concrete services to clients with quality, integrity, and professionalism. We invest in the talent and the equipment to create and maintain landscapes that mirror the lifestyles and unique tastes of our clients, all while adding distinct and value to their properties. </p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>"Some people look for a beautiful place others make a place beautiful.</i></p>
+        <p>Hazrat Inayat Khan</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Menu Container -->
+  <div class="w3-container" id="SERVICES">
+    <div class="w3-content" style="max-width:700px">
+   
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SERVICES</span></h5>
+
+  
+      <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Sprinkler Installation</h5>
+        <p class="w3-text-grey"> Top soil, Grading, Sod installation, Flower bed, Decorative rock, Curving, Edging</p><br>
+      
+        <h5>Vinyl Fence</h5>
+        <p class="w3-text-grey"> Available colors: White, Tan, Gray and Clay</p><br>
+      
+        <h5>Concrete</h5>
+        <p class="w3-text-grey"> Flatworks; Sidewalks, RV parking, Driveway extensions, Patios, and Side walks</p><br>
+      
+    
+      </div>
+  
+  </div>
+  
+  <!-- Contact/Area Container -->
+  <div class="w3-container" id="PORTFOLIO" style="padding-bottom:32px;">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PORTFOLIO</span></h5>
+      <p>Find us at some address at some place.</p>
+      <img src="assets/IMG_7590.jpg" class="w3-image" style="width:100%">
+      <img src="assets/IMG_7592.jpg" class="w3-image" style="width:100%">
+      <p id="CONTACT-US" ><strong>Contact</strong> us for a free consultation or just send us a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Address" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+
+  </footer>
+  
+  <script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  }
+  document.getElementById("myLink").click();
+  </script>
+   
+</body>
+</html>
